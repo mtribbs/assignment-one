@@ -145,3 +145,9 @@ if (triangleFive > triangleSix) {
  } else if (triangleFive === triangleSix) {
      console.log("Triange Five and Six have the same area.");
 }
+
+
+// 4. Answer to why there are parenthesis in area = (base*height) / 2
+// both multiplication and division have the order precedence of 13 in JS, and is read left to right
+// JS should therefore calculate the multiplication first and the division thereafter (I removed the parenthesis and it gave the same result)
+// however, to be sure that there are no faulty calculations it is best to use a parenthesis since they do have the same precedence, to have control of the result
