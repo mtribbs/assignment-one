@@ -44,11 +44,10 @@ const resultCaseOne = (((10*13)/2) > ((16.5*20.3) / 2))
 //     console.log(`The triangle with the largest area is Triangle Two`);
 // }
 
-// using if/else workds but is not displayed in one string
-// using ternary instead
+// using if/else works
+// using ternary
 
 //console.log(`Triangle One has an area of ${triangleOne} cm2 and Triangle Two has an area of ${triangleTwo} cm2. The triangle with the largest area is ${triangleOne > triangleTwo ? "Triangle One" : "Triangle Two"}`);
-
 
 
 // CASE 2
@@ -62,12 +61,12 @@ const triangleThree = ((16.5*20.3)/2)
 
 const triangleFour = ((20.3*16.5)/2)
 // console.log(triangleFour);
-// I see what you did there, didn't think of that
+// of course, they can have the same area... 
 
 // console.log(`Triangle Three has an area of ${triangleThree} cm2 and Triangle Four has an area of ${triangleFour} cm2.`);
 
-//step 2
-// seems like ternary can't have three options...back to if/else
+//step 2 and 3
+// tternary can't have three options... use if/else
 
 // console.log(`Triangle Three has an area of ${triangleThree} cm2 Triangle Four has an area of ${triangleFour} cm2.`);
 // if (triangleThree > triangleFour) {
@@ -76,17 +75,6 @@ const triangleFour = ((20.3*16.5)/2)
 //     console.log("The triangle with the largest area is Triangle Two.");
 // } else if (triangleThree === triangleFour) {
 //     console.log("Triange Three and Four have the same area.");
-// }
-
-//step 3
-
-//to get it all in one phrase I could do this, but then I would be repeating myself
-// if (triangleThree > triangleFour) {
-//     console.log(`Triangle Three has an area of ${triangleThree} cm2 Triangle Four has an area of ${triangleFour} cm2. The triangle with the largest area is Triangle One.`);
-// } else if (triangleThree < triangleFour) {
-//     console.log(`Triangle Three has an area of ${triangleThree} cm2 Triangle Four has an area of ${triangleFour} cm2. The triangle with the largest area is Triangle Two.`);
-// } else if (triangleThree === triangleFour) {
-//     console.log(`Triangle Three has an area of ${triangleThree} cm2 Triangle Four has an area of ${triangleFour} cm2. Triange Three and Four have the same area.`);
 // }
 
 
@@ -114,8 +102,8 @@ const triangleSix = ((9.3*12.4) / 2)
 // }
 
 
-
 // FINAL VERSION FOR ALL CASES
+// also adding else at the end
 
 console.log(`Triangle One has an area of ${triangleOne} cm2 Triangle Two has an area of ${triangleTwo} cm2.`);
  if (triangleOne > triangleTwo) {
@@ -124,6 +112,8 @@ console.log(`Triangle One has an area of ${triangleOne} cm2 Triangle Two has an 
      console.log("The triangle with the largest area is Triangle Two.");
  } else if (triangleOne === triangleTwo) {
      console.log("Triange One and Two have the same area.");
+} else {
+    console.log("Error, try again");
 }
 
 
@@ -134,6 +124,8 @@ if (triangleThree > triangleFour) {
      console.log("The triangle with the largest area is Triangle Two.");
  } else if (triangleThree === triangleFour) {
      console.log("Triange Three and Four have the same area.");
+} else {
+    console.log("Error, try again");
 }
  
 
@@ -144,10 +136,12 @@ if (triangleFive > triangleSix) {
      console.log("The triangle with the largest area is Triangle Six.");
  } else if (triangleFive === triangleSix) {
      console.log("Triange Five and Six have the same area.");
+} else {
+    console.log("Error, try again");
 }
 
 
 // 4. Answer to why there are parenthesis in area = (base*height) / 2
 // both multiplication and division have the order precedence of 13 in JS, and is read left to right
-// JS should therefore calculate the multiplication first and the division thereafter (I removed the parenthesis and it gave the same result)
-// however, to be sure that there are no faulty calculations it is best to use a parenthesis since they do have the same precedence, to have control of the result
+// JS should therefore calculate the multiplication first and the division thereafter (I tried removing the parenthesis and it gave the same result)
+// however, to be sure that there are no erronous calculations it is best to use a parenthesis since they do have the same precedence, to have control of the result
